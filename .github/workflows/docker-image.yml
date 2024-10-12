@@ -24,13 +24,11 @@ jobs:
       password: ${(secrets:DOCKER_PASSWORD)}
       
      
-    with:
+with:
       context: .
       push: true
       tags: |
         ${{secrets:DOCKER_USERNAME}}/myapp:latest
-
-
 
 
 
