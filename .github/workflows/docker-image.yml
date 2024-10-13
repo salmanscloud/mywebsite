@@ -58,9 +58,4 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Create Git tag
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/main')
-        run: |
-          git fetch --prune --unshallow  # Ensure we have all history to tag correctly
-          git tag -a v${{ steps.semver.outputs.version }} -m "Release ${{ steps.semver.outputs.version }}"
-          git push origin v${{ steps.semver.outputs.version }}
+      
