@@ -2,9 +2,9 @@ name: Build and Push Docker Image To Docker Hub
 
 on:
   push:
-    branches: [ main, dev, qa, prod ]
+    branches: [ main, dev, qa, prod ] 
   pull_request:
-    branches: [ dev, qa, prod ]
+    branches: [ dev, qa, prod ] 
 
 jobs:
   build-and-push:
