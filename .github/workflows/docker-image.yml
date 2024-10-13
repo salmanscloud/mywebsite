@@ -2,9 +2,11 @@ name: Build and Push Docker Image To Docker Hub
 
 on:
   push:
+
     branches: [ main, dev, qa, prod ] 
   pull_request:
     branches: [ dev, qa, prod ] 
+
 
 jobs:
   build-and-push:
@@ -12,6 +14,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+
         with:
           fetch-depth: 0  # Ensure all history is fetched, especially for tags
 
