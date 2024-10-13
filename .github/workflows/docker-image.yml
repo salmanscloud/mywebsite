@@ -45,9 +45,9 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/website:${{ steps.semver.outputs.version }}
-            ${{ secrets.DOCKER_USERNAME }}/website:${{ steps.branch-name.outputs.current_branch }}
-            ${{ secrets.DOCKER_USERNAME }}/website:latest
+            ${{ secrets.DOCKER_USERNAME }}/web:${{ steps.semver.outputs.version }}
+            ${{ secrets.DOCKER_USERNAME }}/web:${{ steps.branch-name.outputs.current_branch }}
+            ${{ secrets.DOCKER_USERNAME }}/web:latest
 
       - name: Create Git tag
         if: github.event_name == 'push'
